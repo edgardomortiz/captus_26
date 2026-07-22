@@ -10,15 +10,15 @@ This tutorial has been derived from another [CAPTUS tutorial wirtten by Gentaro 
 
 ## Program (subject to change):
 
-[O](https://github.com/edgardomortiz/captus_26/tree/main/installation)
+[O](https://github.com/edgardomortiz/captus_26/tree/main/0_installation)
 Previous to the workshop and early morning: installation of the pipeline and other software needed
 
-[1](https://github.com/edgardomortiz/captus_26/tree/main/running_captus)
+[1](https://github.com/edgardomortiz/captus_26/tree/main/1_running_captus)
 Morning: preparation of imputs / 
 Late morning: cleaning reads, de novo assembly / 
 Afernoon: target extraction, alignment, preliminary phylogenetic analysis
 
-[2](https://github.com/edgardomortiz/captus_26/tree/main/postrpocessing)
+[2](https://github.com/edgardomortiz/captus_26/tree/main/2_postrpocessing)
 Late afternoon: considerations for downstream analyses and resources
 
 ## Instructors:
