@@ -25,7 +25,7 @@ Late afternoon: considerations for downstream analyses and resources
 
 [Edgardo Ortiz](https://edgardomortiz.github.io/captus.docs/more/credits/) (e.ortizvalencia@ufl.edu): Biological Scientist - Molecular Systematics, experience with bioinformatic pipeline desing, plant systematics, and phylogenomics.
 
-[Oscar Vargas](http://oscarmvargas.com/) (<ov20@humboldt.edu>): Associate Professor of Botany, experience with plant systematics and phylogenomics
+[Oscar Vargas](http://oscarmvargas.com/) (<ov20@humboldt.edu>): Associate Professor of Botany, experience with plant systematics and phylogenomics.
 
 ## Teaching Assistants:
 
