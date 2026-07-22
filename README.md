@@ -1,11 +1,16 @@
 # Workshop on CAPTUS:
+
+![](img/captus.png)
+
 ### Assembly of phylogenomic datasets from High-Throughput Sequencing data, Botany 2026 (Tucson, Arizona)
 
-This one-day workshop is designed to explain how to run CAPTUS with a small dataset. The turorial includes innstructions about how to install the pipeline in personal computers (although, for large datasets we recomend running the pipeline in a cluster), how to name your imput files, prepare reference files, and interpret the ouputs. The workshop also provides considerations and tips for downstream analyses.
+This one-day workshop is designed to explain how to run CAPTUS with a small dataset. The turorial includes instructions about how to install the pipeline in personal computers (although, for large datasets we recomend running the pipeline on a cluster), how to name your imput files, prepare reference files, and interpret the outputs. The workshop also provides considerations and tips for downstream analyses.
+
+This tutorial has been derived from:
 
 [Official documentation for Captus can be found here](https://edgardomortiz.github.io/captus.docs/)
 
-This tutorial has been derived from another [CAPTUS tutorial wirtten by Gentaro Shigita.](https://edgardomortiz.github.io/captus.docs/tutorials/basic/)
+A [CAPTUS tutorial written by Gentaro Shigita.](https://edgardomortiz.github.io/captus.docs/tutorials/basic/)
 
 
 ## Program (subject to change):
