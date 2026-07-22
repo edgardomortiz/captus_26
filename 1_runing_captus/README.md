@@ -1,0 +1,2 @@
+# Runing CAPTUS:
+## Imput prep

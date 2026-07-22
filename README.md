@@ -14,8 +14,8 @@ This tutorial has been derived from another [CAPTUS tutorial wirtten by Gentaro 
 Previous to the workshop and early morning: installation of the pipeline and other software needed
 
 [1](https://github.com/edgardomortiz/captus_26/tree/main/running_captus)
-Morning: preparation of imputs
-Late morning: cleaning reads, de novo assembly
+Morning: preparation of imputs / 
+Late morning: cleaning reads, de novo assembly / 
 Afernoon: target extraction, alignment, preliminary phylogenetic analysis
 
 [2](https://github.com/edgardomortiz/captus_26/tree/main/postrpocessing)
@@ -23,7 +23,7 @@ Late afternoon: considerations for downstream analyses and resources
 
 ## Instructors:
 
-[Edgardo Ortiz](https://cuellar-gempeler-lab.weebly.com/) (ccg@humboldt.edu): Biological Scientist on Molecular Systematics, experience with bioinformatic pipeline desing, plant systematics, and phylogenomics.
+[Edgardo Ortiz](https://edgardomortiz.github.io/captus.docs/more/credits/) (e.ortizvalencia@ufl.edu): Biological Scientist - Molecular Systematics, experience with bioinformatic pipeline desing, plant systematics, and phylogenomics.
 
 [Oscar Vargas](http://oscarmvargas.com/) (<ov20@humboldt.edu>): Associate Professor of Botany, experience with plant systematics and phylogenomics
 
