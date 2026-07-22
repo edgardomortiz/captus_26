@@ -55,7 +55,7 @@ captus assemble -r 01_clean_reads
 
 Let's look at the output in the newly created folder `02_assemblies`
 
-![](img/tutorial_basic_assemble.png)
+<img src="https://github.com/edgardomortiz/captus_26/blob/main/1_running_captus/img/tutorial_basic_assemble.png" width="600" >
 
 ## Third Step: Extract Target Sequences
 
@@ -90,7 +90,7 @@ MAKKKAFISLIYLASIVFLPWWLSFTFNKSMESWVKNCWNTGPSENFLNDIEEKIIIKKFIELEELSLFDEILKDYTQD*
 
 Here is an explanation of the formatting:
 
-![](img/multi_seq_per_locus.png)
+<img src="https://github.com/edgardomortiz/captus_26/blob/main/1_running_captus/img/multi_seq_per_locus.png" width="600" >
 
 - The sequence name (any text found before the first space) can contain multiple `-` characters, but only the last one will become the separator.
 - Any text found before the separator will be considered as sequence ID.
@@ -104,7 +104,7 @@ captus extract -a 02_assemblies -n XXXXXXX
 ```
 Let's look at the results 
 
-![](img/tutorial_basic_extract.png)
+<img src="https://github.com/edgardomortiz/captus_26/blob/main/1_running_captus/img/tutorial_basic_extract.png" width="600" >
 
 the FASTA files (`*.faa` and `*.fna`; highlighted in the image above) in each directory store the extracted sequences 
 
