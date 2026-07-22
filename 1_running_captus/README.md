@@ -22,7 +22,7 @@ In general, a good tip for renaming your samples is to think on how you want the
 
 The format used by CAPTUS looks like this:
 
-![](img/fastq.png | width=500)
+<img src="https://github.com/edgardomortiz/captus_26/blob/main/1_running_captus/img/fastq.png" width="600" >
 
 - Any text found before the `_R#` pattern and the extension will become your sample name (`Pouteria_lucuma_EO9854` in this case).
 If you are using paired-end reads, your R1 and R2 filenames should contain the patterns `_R1` and `_R2` respectively to be correctly matched and used as pairs.
