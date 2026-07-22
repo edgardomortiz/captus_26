@@ -1,6 +1,5 @@
 # Running CAPTUS:
-
-**Intro ppt**
+*Intro ppt*
 
 Let's make sure CAPTUS is installed:
 ```
@@ -13,7 +12,6 @@ captus -h
 ```
 
 ## Imput prep
-
 In general, a good tip for renaming your samples is to think on how you want the names in your final phylogenetic tree. If names are too long or subject to change, you can use codes that later can be replaced by names, but this requires some programming skills.
 
 - The only special characters that are safe to use in the sample name are `-`, and `_` (`_` is commonly used to replace spaces in many phylogenetic programs).
@@ -30,7 +28,6 @@ If you are using paired-end reads, your R1 and R2 filenames should contain the p
 - These are the valid extensions: `.fq`, `.fastq`, `.fq.gz`, and `.fastq.gz`.
 
 ## Downloading the data
-
 This data has been specially prepared for this workshop, it has been subsampled from published data available in GenBank
 
 DROPBOX LINK
@@ -38,7 +35,6 @@ DROPBOX LINK
 within your project folder, create another folder `00_raw_reads`, then move all the read files into this folder
 
 ## First Step: Cleaning the Reads
-
 Let’s start the analysis with cleaning the raw reads using the clean command. The clean command trims adapter sequences and low-quality bases, and filters out reads with low average quality score.
 ```
 captus clean -r 00_raw_reads
@@ -47,7 +43,6 @@ captus clean -r 00_raw_reads
 Let's look at the output
 
 ## Second Step: *De Novo* Assembly 
-
 Run the following command to perform de novo assembly for all the samples with default settings optimized for targeted-capture and genome skimming data.
 ```
 captus assemble -r 01_clean_reads
@@ -58,13 +53,11 @@ Let's look at the output in the newly created folder `02_assemblies`
 <img src="https://github.com/edgardomortiz/captus_26/blob/main/1_running_captus/img/tutorial_basic_assemble.png" width="600" >
 
 ## Third Step: Extract Target Sequences
-
 A reference target file in fasta format is needed before we can do the extraction of our target. The file can contain multiple references for a single region, for example samples from multiples species from the same locus. Formatting is important so CAPTUS can interpret the file correctly. CAPTUS can interpret DNA and aminoacid sequences.
 
 When multiple reference sequences per locus are found in the reference dataset, CAPTUS will evaluate during the extraction which of those references matches your assembly best based on similarity and total recovered length percentage.
 
 Here is an example of a reference protein dataset that has two loci (called accD and cemA) with five reference sequences each (probably coming from different taxa to expand phylogenetic coverage).
-
 ```
 >AA-S46062.1-accD [cluster_size=80]
 MALQSLRGSMRSVVGKRICPLIEYAIFPPLPRIIVYASRRARMQRGNYSLIKKPKKVSTLRQYQSTKSPMYQSLQRICGVREWLNKYCMWKEVDEKDFG*
@@ -98,7 +91,6 @@ Here is an explanation of the formatting:
 - Any text found after the first space is considered the description and this text is optional.
 
 Place the reference file inside your working directory. Then run the extrating command:
-
 ```
 captus extract -a 02_assemblies -n XXXXXXX
 ```
@@ -107,4 +99,48 @@ Let's look at the results
 <img src="https://github.com/edgardomortiz/captus_26/blob/main/1_running_captus/img/tutorial_basic_extract.png" width="600" >
 
 the FASTA files (`*.faa` and `*.fna`; highlighted in the image above) in each directory store the extracted sequences 
+
+## Fourth Step: Sequence Alignment and Paralog Filtering
+Now that we have extracted the sequences out of our assemblies CAPTUS will put them together in matrices and perform clipping and filtering. A great quality of CAPTUS is that it saves intermediate steps allowing the user to acces intermediate matrices. For example, the user can access a locus aligment beefore paralogs are filtered out, so the user can use an alternative method for paralog detection.
+
+Let's run the aligment:
+```
+captus align -e 03_extractions
+```
+
+Let's look at the results 
+
+<img src="https://github.com/edgardomortiz/captus_26/blob/main/1_running_captus/img/tutorial_basic_align.png" width="600" >
+
+[A full explanation of the output can be found here](https://edgardomortiz.github.io/captus.docs/assembly/align/output/)
+
+
+Let's look at the matrices that still contain paralogs. Since we provided our own targets we need to navigate to:
+```
+04_alignments/03_trimmed/04_unfiltered/04_misc_DNA/02_matches_flanked
+```
+These aligments along with `captus-align_astral-pro.tsv` can be used as inputs with ASTRAL-pro.
+
+
+Now, let's look at the aligments that paralogs filtered out, ready for phylogenetic analysis:
+```
+04_alignments/03_trimmed/06_informed/04_misc_DNA/02_matches_flanked
+```
+Captus also produces a nice report:
+`captus-align_report.html`
+
+5. Phylogenetic inference:
+While most likely you might need to do some more processing to your alignents, we can inferred a concatenated phylogeny using IQ-TREE:
+```
+mkdir 05_phylogeny && cd 05_phylogeny
+iqtree -p ../04_alignments/03_trimmed/06_informed/01_coding_NUC/02_NT -pre concat -T AUTO
+```
+-p : NEXUS/RAxML partition file or path to a directory with alignments
+-pre : Prefix for output files
+-T : Number of cores/threads to use or AUTO-detect (default: 1)
+
+Results can be opened in FIGTREE
+
+***Congratulations you have completed the tutorial***
+
 
