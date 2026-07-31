@@ -12,8 +12,12 @@ And then runing the installer:
 ```
 bash ~/Miniconda3-latest-MacOSX-arm64.sh
 ```
+If your mac is intel-based, you will need `MacOSX-x86_64.sh`.
 
-If your mac is intel-based, you will need `MacOSX-x86_64.sh` instead
+We also need a specific version for SALMON:
+```
+conda install -c bioconda -c conda-forge salmon=1.10.3
+```
 
 ### Installing CAPTUS
 With ANACONDA installed now you can install CAPTUS. Mac computers with Apple silicon (M processors):

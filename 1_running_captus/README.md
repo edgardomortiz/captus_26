@@ -100,11 +100,13 @@ Here is an explanation of the formatting:
 - Any text found after the the separator will become the locus name.
 - Any text found after the first space is considered the description and this text is optional.
 
-[Download the ribosomal and nuclear target files here](https://www.dropbox.com/scl/fi/5x7i74q6ysh0gooewieiw/targets.zip?rlkey=h4dxcxtga5j8pvalhf6ky7dwo&dl=0)
+If for any reason the assembly step did not work [download the assemblies from this link](https://www.dropbox.com/scl/fi/brwtk22kg91vtii9ir0p4/02_assemblies.zip?rlkey=lwfdb5jvjpfun9mmqckuheesw&dl=0)
+
+[Download the ribosomal and nuclear target files here](https://www.dropbox.com/scl/fi/of9zzh7t95i7t0flwy0ps/targets.zip?rlkey=v5wgd1mlagavnnj8joj7obtfr&dl=0)
 
 Place the reference file inside your working directory. Then run the extrating command:
 ```
-captus extract -a 02_assemblies -n targets/lecy_nuclear_targets.fa -p seedplantsptd -m seedplantsmit -d targets/Lecy_nrDNA_targets.fa
+captus extract -a 02_assemblies -n targets/Lecy_nuclear_targets.fa -p seedplantsptd -m seedplantsmit -d targets/Lecy_nrDNA_targets.fa
 ```
 Let's look at the results 
 
