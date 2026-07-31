@@ -5,12 +5,14 @@
 
 This one-day workshop is designed to explain how to run CAPTUS with a small dataset. The turorial includes instructions about how to install the pipeline in personal computers (although, for large datasets we recomend running the pipeline on a cluster), how to name your imput files, prepare reference files, and interpret the outputs. The workshop also provides considerations and tips for downstream analyses.
 
-This tutorial has been derived from:
+This tutorial is a derivation of the admixture of:
 
-[Official documentation for Captus can be found here](https://edgardomortiz.github.io/captus.docs/)
+[Official documentation for CAPTUS](https://edgardomortiz.github.io/captus.docs/)
 
 A [CAPTUS tutorial written by Gentaro Shigita.](https://edgardomortiz.github.io/captus.docs/tutorials/basic/)
 
+
+[A class on phylogenetics by Oscar Vargas](https://github.com/oscarvargash/phylo_26)
 
 ## Program (subject to change):
 
