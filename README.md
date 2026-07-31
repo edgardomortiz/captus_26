@@ -9,7 +9,7 @@ This tutorial is a derivation of the admixture of:
 
 [Official documentation for CAPTUS](https://edgardomortiz.github.io/captus.docs/)
 
-A [CAPTUS tutorial written by Gentaro Shigita.](https://edgardomortiz.github.io/captus.docs/tutorials/basic/)
+[A CAPTUS tutorial written by Gentaro Shigita.](https://edgardomortiz.github.io/captus.docs/tutorials/basic/)
 
 
 [A class on phylogenetics by Oscar Vargas](https://github.com/oscarvargash/phylo_26)
