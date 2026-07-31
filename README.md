@@ -1,5 +1,5 @@
 # Workshop on CAPTUS:
-<img src="https://github.com/edgardomortiz/captus_26/blob/main/img/captus.png" width="200" >
+<img src="https://github.com/edgardomortiz/captus_26/blob/main/img/captus2.png" width="200" >
 
 ### Assembly of phylogenomic datasets from High-Throughput Sequencing data, Botany 2026 (Tucson, Arizona)
 
