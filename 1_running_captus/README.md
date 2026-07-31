@@ -143,7 +143,7 @@ Now, let's look at the aligments that paralogs filtered out, ready for phylogene
 Captus also produces a nice report:
 `captus-align_report.html`
 
-5. Phylogenetic inference:
+## Fifth: Phylogenetic inference:
 While most likely you might need to do some more processing to your alignents, we can inferred a concatenated phylogeny using IQ-TREE:
 ```
 mkdir 05_phylogeny && cd 05_phylogeny
