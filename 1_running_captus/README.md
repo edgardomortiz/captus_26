@@ -147,7 +147,7 @@ Captus also produces a nice report:
 While most likely you might need to do some more processing to your alignents, we can inferred a concatenated phylogeny using IQ-TREE:
 ```
 mkdir 05_phylogeny && cd 05_phylogeny
-iqtree -p ../04_alignments/03_trimmed/06_informed/01_coding_NUC/02_NT -pre concat -T AUTO
+iqtree3 -p ../04_alignments/03_trimmed/06_informed/01_coding_NUC/02_NT -pre concat -T AUTO
 ```
 -p : NEXUS/RAxML partition file or path to a directory with alignments
 -pre : Prefix for output files
