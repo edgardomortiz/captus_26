@@ -1,5 +1,4 @@
 # Running CAPTUS:
-*Intro ppt*
 
 Let's make sure CAPTUS is installed:
 ```
@@ -30,17 +29,27 @@ If you are using paired-end reads, your R1 and R2 filenames should contain the p
 ## Downloading the data
 This data has been specially prepared for this workshop, it has been subsampled from published data available in GenBank
 
-DROPBOX LINK
+[DOWNLOAD DATA HERE](https://urldefense.com/v3/__https://www.dropbox.com/scl/fo/fch6wr6j9mjxqy1ezat63/ADqE9XkiXWLY1xMShCeMkZQ?rlkey=os9xqpyexlkjijjj9h1y30wqn&st=bd1fsxvg&dl=0__;!!OzdlGbv3!-EhQ-6Rr2tTgJy5Lyb5JdSies7NA3HN84ITtZGqhIFeeEqkmNMVHEXaYVlgcDr6vvuyQrRzpvVuV-TIywGAgtCjMtiAPtQ$)
 
-within your project folder, create another folder `00_raw_reads`, then move all the read files into this folder
+You don't need to log-in into DROPBOX, simply click on `Or continue with download only` at the bottom of the pop-up window.
+
+Please create a folder called `captus_workshop`, this folder is going to be working directory.
+
+Within `captus_workshop`, create another folder `00_raw_reads`, then move all the read files into this folder.
 
 ## First Step: Cleaning the Reads
+The data in usage today comes from a [published phylogeny in the Lecythidaceae](https://doi.org/10.3100/hpib.v29iss1.2024.n18
+) that employed both target sequencing of custom markers and genome skimming, the latter aiming to obtain chloroplast data. The data has been subsampled so it can be run in personal computers.
+
 Let’s start the analysis with cleaning the raw reads using the clean command. The clean command trims adapter sequences and low-quality bases, and filters out reads with low average quality score.
+
+Navigate inside your terminal to within the `captus_workshop` folder, then:
+
 ```
-captus clean -r 00_raw_reads
+captus clean -r 00_raw
 ```
 
-Let's look at the output
+Let's look at the output in the folder `01_clean_reads`. Pay special attention to the `HTML` reports `01_qc_stats_before` and `02_qc_stats_after`
 
 ## Second Step: *De Novo* Assembly 
 Run the following command to perform de novo assembly for all the samples with default settings optimized for targeted-capture and genome skimming data.
@@ -49,6 +58,7 @@ captus assemble -r 01_clean_reads
 ```
 
 Let's look at the output in the newly created folder `02_assemblies`
+
 
 <img src="https://github.com/edgardomortiz/captus_26/blob/main/1_running_captus/img/tutorial_basic_assemble.png" width="600" >
 
