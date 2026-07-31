@@ -100,11 +100,11 @@ Here is an explanation of the formatting:
 - Any text found after the the separator will become the locus name.
 - Any text found after the first space is considered the description and this text is optional.
 
-[Download the target files here](https://www.dropbox.com/scl/fi/5x7i74q6ysh0gooewieiw/targets.zip?rlkey=h4dxcxtga5j8pvalhf6ky7dwo&dl=0)
+[Download the ribosomal and nuclear target files here](https://www.dropbox.com/scl/fi/5x7i74q6ysh0gooewieiw/targets.zip?rlkey=h4dxcxtga5j8pvalhf6ky7dwo&dl=0)
 
 Place the reference file inside your working directory. Then run the extrating command:
 ```
-captus extract -a 02_assemblies -n targets
+captus extract -a 02_assemblies -n targets/lecy_nuclear_targets.fa -p seedplantsptd -m seedplantsmit -d targets/Lecy_nrDNA_targets.fa
 ```
 Let's look at the results 
 
