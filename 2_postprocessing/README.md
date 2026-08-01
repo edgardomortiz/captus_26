@@ -16,11 +16,7 @@ To follow the tutorial you will need installed the following programs:
 
 ## Trimming alignments 
 
-Let's look at an alignment:
-
-```
-aliview your-alignment.al
-```
+Let's look at an alignment, open `AT1G01180.fna` with aliview.
 
 How does it look?
 
@@ -35,7 +31,7 @@ aliview your-alignment.al.trm -automated1
 ```
 How does it look now?
 
-[Trimal has multiple options got triming that you might want to explore](https://trimal.readthedocs.io/en/latest/usage.html#trimming-methods)
+[Trimal has multiple options for triming that you might want to explore](https://trimal.readthedocs.io/en/latest/usage.html#trimming-methods)
 
 You can run TRIMAL for all alignments, using the `-automated1` in a folder by doing:
 
@@ -48,7 +44,7 @@ for file in *.fna; do trimal -in $file -out $file.trm -automated1; done
 
 We can need to infer gene trees for each on the genes in the  data. Notice that we will use GTR+G to save some time from model testing. In the same folder
 ```
-for file in *.trm; do iqtree2 -bb 1000 -s $file -m GTR+G; done
+for file in *.trm; do iqtree3 -bb 1000 -s $file -m GTR+G; done
 ```
 
 Let's take a look at one tree. You can look at the results using FIGTREE

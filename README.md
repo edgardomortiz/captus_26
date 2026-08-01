@@ -14,13 +14,18 @@ This tutorial is a derivation of the admixture of:
 
 [A class on phylogenetics by Oscar Vargas](https://github.com/oscarvargash/phylo_26)
 
+
+## Full processed dataset
+
+Because some of the steps might take some time it will be useful to have the full dataset processed for the tutorial, [download the complete dataset processed](https://www.dropbox.com/scl/fi/1s9u5a9zkkpww62x3mpuv/captus_workshop_BACKUP.zip?rlkey=cbuulhurr14u4u8zmgzmztgub&dl=0)
+
 ## Program (subject to change):
 
 [O](https://github.com/edgardomortiz/captus_26/tree/main/0_installation)
 Previous to the workshop and early morning: installation of the pipeline and other software needed
 
 [1](https://github.com/edgardomortiz/captus_26/tree/main/1_running_captus)
-Morning: preparation of imputs / 
+Morning: installation /preparation of imputs / 
 Late morning: cleaning reads, de novo assembly / 
 Afernoon: target extraction, alignment, preliminary phylogenetic analysis
 
