@@ -33,9 +33,7 @@ This data has been specially prepared for this workshop, it has been subsampled 
 
 You don't need to log-in into DROPBOX, simply click on `Or continue with download only` at the bottom of the pop-up window.
 
-Please create a folder called `captus_workshop`, this folder is going to be working directory.
-
-Within `captus_workshop`, create another folder `00_raw_reads`, then move all the read files into this folder.
+You should have downloaded a large ZIP file, decompress it to see two folders inside, one containing the reads called `00_raw` and one containing target files called `targets`
 
 ## First Step: Cleaning the Reads
 The data in usage today comes from a [published phylogeny in the Lecythidaceae](https://doi.org/10.3100/hpib.v29iss1.2024.n18
@@ -102,11 +100,16 @@ Here is an explanation of the formatting:
 
 If for any reason the assembly step did not work [download the assemblies from this link](https://www.dropbox.com/scl/fi/brwtk22kg91vtii9ir0p4/02_assemblies.zip?rlkey=lwfdb5jvjpfun9mmqckuheesw&dl=0)
 
-[Download the ribosomal and nuclear target files here](https://www.dropbox.com/scl/fi/of9zzh7t95i7t0flwy0ps/targets.zip?rlkey=v5wgd1mlagavnnj8joj7obtfr&dl=0)
-
-Place the reference file inside your working directory. Then run the extrating command:
 ```
-captus extract -a 02_assemblies -n targets/Lecy_nuclear_targets.fa -p seedplantsptd -m seedplantsmit -d targets/Lecy_nrDNA_targets.fa
+captus extract \
+    -a 02_assemblies \
+    --nuc_refs targets/Lecy_NUC_CDS354.FNA \
+    --ptd_refs SeedPlantsPTD \
+    --mit_refs SeedPlantsMIT \
+    --dna_refs targets/Lecy_nrDNA_PTD_DNA40.fasta \
+    --cluster_leftovers \
+    --cl_min_identity 81 \
+    --cl_tmp_dir .
 ```
 Let's look at the results 
 
@@ -156,5 +159,3 @@ iqtree3 -p ../04_alignments/03_trimmed/06_informed/01_coding_NUC/02_NT -pre conc
 Results can be opened in FIGTREE
 
 ***Congratulations you have completed the tutorial***
-
-
