@@ -7,7 +7,7 @@ Captus uses ANACONDA for installation. Please make sure to install it in your co
 ```
 curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh
 ```
-And then runing the installer:
+And then run the installer:
 ```
 bash Miniconda3-latest-MacOSX-arm64.sh
 ```
@@ -15,7 +15,7 @@ If your mac is Intel-based, you can download `miniconda` using:
 ```
 curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86.sh
 ```
-And then runing the installer:
+And then run the installer:
 ```
 bash Miniconda3-latest-MacOSX-x86.sh
 ```
@@ -98,7 +98,7 @@ If your PC is Intel-based, you can download `miniconda` using:
 ```
 curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
-And then runing the installer:
+And then run the installer:
 ```
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
@@ -106,12 +106,12 @@ If your PC has an ARM64 processor use:
 ```
 curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
 ```
-And then runing the installer:
+And then run the installer:
 ```
 bash Miniconda3-latest-Linux-aarch64.sh
 ```
 
-## 3. Installing Captus on WSL Ubuntu
+### 3. Installing Captus on WSL Ubuntu
 Run the following command:
 ```
 conda create -n captus -c bioconda -c conda-forge captus megahit=1.2.9=hfbae3c0_0 salmon=1.10.3 bbmap=39.52 mafft=7.526

@@ -1,10 +1,10 @@
 # Postprocessing:
-this page contains some basic information about postprocessing options after runing CAPTUS. This tutorial is intended to work on a Linux terminal; we believe this will work on the Windows Subsystem for Linux (WSL) too.
+This page contains some basic information about postprocessing options after runing CAPTUS. This tutorial is intended to work on a Linux terminal; we believe this will work on the Windows Subsystem for Linux (WSL) too.
 To follow the tutorial you will need installed the following programs:
 
 [MAFFT](https://mafft.cbrc.jp/alignment/software/)
 
-[TrimAl](http://trimal.cgenomics.org/)
+[TrimAl](http://trimal.cgenomics.org/) (This is optional, Captus trims alignments using ClipKIT, which tends to outperform TrimAl)
 
 [AliView](https://ormbunkar.se/aliview/)
 
@@ -71,3 +71,8 @@ We can now run Astral-pro3:
 ```
 
 We can now see the tree in FIGTREE
+
+## Using Captus additional scripts
+`phylo_commands`: creates commands for running phylogenies directly from the file structure of the alignments folder produced by Captus, for FastTree and IQ-TREE
+`concatenate_alignments`: contatenates alignments directly from the file structure of the alignments folder produced by Captus
+`new_targets_from_alignments`: we can explore this tool if time permits, we also have a presentation about it on Monday: [https://www.xcdsystem.com/botany/program/QCq9cvK/index.cfm?pgid=3884&sid=35249&abid=170344](https://www.xcdsystem.com/botany/program/QCq9cvK/index.cfm?pgid=3884&sid=35249&abid=170344)
